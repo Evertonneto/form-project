@@ -3,11 +3,11 @@ let isClicked = false;
 
 select.addEventListener("click", function () {
   if (!isClicked) {
-    select.style.backgroundImage = "url(./imgs/CaretUp.png)";
+    select.style.backgroundImage = "url(./src/imgs/CaretUp.png)";
 
     isClicked = true;
   } else {
-    select.style.backgroundImage = "url(./imgs/CaretDown.png)";
+    select.style.backgroundImage = "url(./src/imgs/CaretDown.png)";
 
     isClicked = false;
   }
@@ -15,7 +15,7 @@ select.addEventListener("click", function () {
 
 document.addEventListener("click", (event) => {
   if (!select.contains(event.target)) {
-    select.style.backgroundImage = "url(./imgs/CaretDown.png)";
+    select.style.backgroundImage = "url(./src/imgs/CaretDown.png)";
     isClicked = false;
   }
 });
