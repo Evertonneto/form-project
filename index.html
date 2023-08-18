@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crie seu evento</title>
 
-    <link rel="shortcut icon" href="./imgs/align-justify-solid.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/imgs/align-justify-solid.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="./src/css/style.css">
 
@@ -25,19 +25,19 @@
             <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
         </header>
 
-        <form action="">
+        <form action="" id="my-form">
 
             <fieldset>
                 <legend>Informações do Evento</legend>
 
                 <div class="input-wrapper">
                     <label for="event-title">Título do Evento<span>(mínimo de 8 caracteres)</span></label>
-                    <input type="text" id="event-title" />
+                    <input type="text" id="event-title" required minlength="8" />
                 </div>
 
                 <div class="input-wrapper">
                     <label for="event-link">Link do Evento<span>(comece com https://)</span></label>
-                    <input type="url" id="event-link" />
+                    <input type="url" id="event-link" required />
                 </div>
                 <div class="input-wrapper">
                     <label for="event-whatsapp">Whatsapp para contato<span>(Somente números)</span></label>
@@ -66,13 +66,14 @@
                 </div>
                 <div class="input-wrapper">
                     <label for="event-password">Título do Evento<span>(mínimo de 8 caracteres)</span></label>
-                    <input type="password" id="event-password" />
+                    <input type="password" id="event-password" minlength="8" />
                 </div>
                 <div class="checkbox-wrapper">
                     <input type="checkbox" id="event-private" />
                     <label for="event-private">Evento Privado</label>
                 </div>
             </fieldset>
+
             <fieldset>
                 <legend>Dia e hora</legend>
                 <div class="col-3">
@@ -92,6 +93,11 @@
             </fieldset>
 
         </form>
+
+        <footer class="form-buttons">
+            <button type="submit" value="Salvar Evento" class="button" form="my-form">Salvar Evento</button>
+
+        </footer>
 
     </div>
 
